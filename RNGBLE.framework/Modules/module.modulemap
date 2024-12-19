@@ -1,0 +1,11 @@
+framework module RNGBLE {
+  umbrella header "RNGBLE.h"
+  export *
+
+  module * { export * }
+}
+
+module RNGBLE.Swift {
+  header "RNGBLE-Swift.h"
+  requires objc
+}
