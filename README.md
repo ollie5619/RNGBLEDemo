@@ -4,7 +4,7 @@ Xcode 14.0+
 Programming Language Swift
 Minimum Deployment Support iOS Deployment Target iOS 12.0
 
-[# Gif](https://github.com/ollie5619/RNGBLEDemo/blob/main/2.gif)
+![Gif](https://github.com/ollie5619/RNGBLEDemo/blob/main/2.gif)
 
 ## Introducing RNGBLE.framework
 
