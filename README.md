@@ -237,7 +237,7 @@ For an example of the write address ``address`` command operation, see ``#### se
 ```
     let address: UInt8 = 0xFF
     bleManager.send(currPeripheral, commandList: [RNGCommandController.SKU(address)]) { singleSuccess, commandIdx, command, receivedList in
-        guard singleSuccess, let receivedList = receivedList, receivedList.count > 3 else { return }
+        guard singleSuccess, let receivedList, receivedList.count > 3 else { return }
         let sku = RNGBLETools.getASCII(with: Array(receivedList[3...]))
     }
 ```
@@ -249,7 +249,7 @@ For an example of the write address ``address`` command operation, see ``#### se
         RNGCommandController.SKU(address),
         RNGCommandController.address(address),
     ) { singleSuccess, commandIdx, command, receivedList in
-        guard singleSuccess, let receivedList = receivedList else { return } return
+        guard singleSuccess, let receivedList else { return } return
         // The first way to write commandIdx is to determine if commandIdx == 0.
         If commandIdx == 0, receivedList.count > 3 {
             let sku = RNGBLETools.getASCII(with: Array(receivedList[3...]))
@@ -359,12 +359,12 @@ For an example of the write address ``address`` command operation, see ``#### se
     let currControlelrModel = BLEControllerModel() // create the data receiving container
     bleManager.send(currPeripheral, commandList: [
         RNGCommandController.batterySOC(),
-        RNGCommandController.batteryChargingVolts(), [ RNGCommandController.batterySOC(), [
+        RNGCommandController.batteryChargingVolts(),
         RNGCommandController.batteryChargingAmps(),
-        RNGCommandController.temperatures(), RNGCommandController.batteryChargingAmps(), RNGCommandController.
-        RNGCommandController.dcVolts(), ]) { singleSuccess, command
+        RNGCommandController.temperatures(), 
+        RNGCommandController.dcVolts(),
     ]) { singleSuccess, commandIdx, command, receivedList in
-        guard singleSuccess, let command = command as? RNGCommandController, let receivedList = receivedList else { return }
+        guard singleSuccess, let command = command as? RNGCommandController, let receivedList else { return }
         let model = command.getData(currControlelrModel, deviceSku: sku, receivedList: receivedList)
         let batterySOC = model.batterySOC
         let batteryChargingVolts = model.batteryChargingVolts
