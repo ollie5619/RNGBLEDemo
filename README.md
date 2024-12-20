@@ -21,8 +21,7 @@ Minimum Deployment Support iOS Deployment Target iOS 12.0
 ```
 import RNGBLE
 ```
-
-- Create an instance of ``RNGBLEManager`` in ``ViewController`` `bleManager``
+- Create an instance of ``RNGBLEManager`` in ``ViewController`` ``bleManager``
 ```
 class ViewController: UIViewController {
     private let bleManager = RNGBLEManager()
@@ -31,10 +30,10 @@ class ViewController: UIViewController {
 or
 ```
 class ViewController: UIViewController {
-    private let bleManager = RNGBLEManager(serviceCharacteristic: .init(notiService: “FFF0”, notiCharacteristic: “FFF1”, readWriteService: “FFD0 ”, readWriteCharacteristic: “FFD1”))
+    private let bleManager = RNGBLEManager(serviceCharacteristic: .init(notiService: "FFF0", notiCharacteristic: "FFF1", readWriteService: "FFD0", readWriteCharacteristic: "FFD1"))
 }
 ```
-Where ``RNGBLEServiceCharacteristic`` supports custom notification/read/write service and characterization value attributes, ``FFF0````FFF1`` is the notification service characterization value attribute ``FFD0````FFD1`` read/write service characterization value attribute
+Where ``RNGBLEServiceCharacteristic`` supports custom notification/read/write service and characterization value attributes, ``FFF0`` ``FFF1`` is the notification service characterization value attribute ``FFD0`` ``FFD1`` read/write service characterization value attribute
 
 - Setting the proxy
 ```
@@ -105,20 +104,20 @@ extension ViewController: RNGBLEManagerDelegate {
         switch central.state {
         case .poweredOn: break
         case .poweredOff: // Bluetooth is off.
-            print(“Bluetooth is not powered on”)
+            print("Bluetooth is not powered on")
         case .unauthorized: // Bluetooth is not authorized.
             if #available(iOS 13.0, *) {
                 switch central.authorization {
                 case .denied: // Bluetooth authorization is not enabled
-                    print(“You are not authorized to use bluetooth”)
+                    print("You are not authorized to use bluetooth")
                 case .restricted: // Bluetooth is restricted, usually turned on/off in iPhone/iPad settings.
-                    print(“Bluetooth is restricted”)
-                case .restricted: // Bluetooth authorization is not available. print(“Bluetooth is restricted”)
-                    print(“Unexpected bluetooth authorization”)
+                    print("Bluetooth is restricted")
+                case .restricted: // Bluetooth authorization is not available. print("Bluetooth is restricted")
+                    print("Unexpected bluetooth authorization")
                 }
             }
         case .unsupported: // Bluetooth is not supported on this device.
-            print(“Bluetooth is not supported on this device”)
+            print("Bluetooth is not supported on this device")
         default: break
         }
     }
@@ -175,7 +174,7 @@ extension ViewController: RNGBLEManagerDelegate {
     }
 ```
 
-#### Basic Bluetooth communication, you need to parse it yourself, for direct calls, see ``### Controller identification and communication``.
+#### Basic Bluetooth communication, you need to parse it yourself, for direct calls, see [Controller identification and communication](#chapter1).
 
 #### Basic concepts of instructions
 
@@ -210,7 +209,7 @@ public protocol RNGCommandProtocol {
     /// Minimum command response time
     var minReceivedTime: TimeInterval { get }
     /// Whether a timeout is required
-    /// - No timeout is needed to indicate that the command was sent “successfully”.
+    /// - No timeout is needed to indicate that the command was sent "successfully".
     var needSendTimeOut: Bool { get }
     /// Data length is exceeded, proxy returns in two passes.
     var hasTwiceResponse: Bool { get }
@@ -290,6 +289,7 @@ For an example of the write address ``address`` command operation, see ``#### se
     }
 ```
 
+<a id="chapter1"></a>
 ### Controller identification and communication, encapsulated, so you don't need to parse it yourself.
 
 #### Identifying the controller
@@ -298,7 +298,7 @@ For an example of the write address ``address`` command operation, see ``#### se
 ```
     currPeripheral.isController(bleManager) { isController, SKU in
         guard isController, let x = SKU else {
-            print(“Not a controller”)
+            print("Not a controller")
             return
         }
         // Handle your code here. 
@@ -391,11 +391,11 @@ For an example of the write address ``address`` command operation, see ``#### se
 - Call the ``RNGPeripheral.isInverter`` method, passing ``RNGBLEManager`` as a parameter
 ```
     currPeripheral.isInverter(bleManager) { isInverter, address_deviceSku in
-        guard isController, let (address, deviceSku) = address_deviceSku else {
-            print(“Not an inverter”)
+        guard isInverter, let (address, deviceSku) = address_deviceSku else {
+            print("Not an inverter")
             return
         }
-        print(“Inverter address and SKU:”, address, deviceSku)
+        print("Inverter address and SKU:", address, deviceSku)
         // Process your code here. Due to the special nature of the 1000w inverter, the address is also checked when the inverter is recognized, and here the method returns data in the form of address+SKU
     }
 ```
@@ -424,11 +424,11 @@ For an example of the write address ``address`` command operation, see ``#### se
     let address: UInt8 = 0xFF
     var model = BLEInverterModel()
     bleManager?.send(currPeripheral, commandList: [
-        RNGCommandInverter.outputVoltage(address), [ ], commandsAllSend
+        RNGCommandInverter.outputVoltage(address),
     ], commandsAllSend: true) { singleSuccess, commandIdx, command, receivedList in
         guard singleSuccess, let command = command as? RNGCommandInverter, let receivedList else { return }
         model = command.getData(model, receivedList: receivedList)
-        print(“Inverter output voltage”, model.outputVoltage)
+        print("Inverter output voltage", model.outputVoltage)
     }
 ```
 
@@ -436,15 +436,15 @@ For an example of the write address ``address`` command operation, see ``#### se
     let address: UInt8 = 0xFF
     var model = BLEInverterModel()
     bleManager?.send(currPeripheral, commandList: [
-        RNGCommandInverter.address(address), [
-        RNGCommandInverter.outputVoltage(address), [
-        RNGCommandInverter.outputAmps(address), [ RNGCommandInverter.outputVoltage(address)
-        RNGCommandInverter.outputFrequency(address), RNGCommandInverter.outputAmps(address), RNGCommandInverter.
-        RNGCommandInverter.batteryVoltage(address), RNGCommandInverter.outputAmps(address), RNGCommandInverter.outputFrequency(address), RNGCommandInverter.
-        RNGCommandInverter.temperature(address), RNGCommandInverter.
-        RNGCommandInverter.errList_x0FA7(address), RNGCommandInverter.
-        RNGCommandInverter.mode(address), RNGCommandInverter.
-        RNGCommandInverter.errList_x112E_4(address), ], commandsAllSend
+        RNGCommandInverter.address(address),
+        RNGCommandInverter.outputVoltage(address),
+        RNGCommandInverter.outputAmps(address),
+        RNGCommandInverter.outputFrequency(address),
+        RNGCommandInverter.batteryVoltage(address), 
+        RNGCommandInverter.temperature(address), 
+        RNGCommandInverter.errList_x0FA7(address), 
+        RNGCommandInverter.mode(address), 
+        RNGCommandInverter.errList_x112E_4(address),
     ], commandsAllSend: true) { singleSuccess, commandIdx, command, receivedList in
         guard singleSuccess, let command = command as? RNGCommandInverter, let receivedList else { return }
         model = command.getData(model, receivedList: receivedList)
