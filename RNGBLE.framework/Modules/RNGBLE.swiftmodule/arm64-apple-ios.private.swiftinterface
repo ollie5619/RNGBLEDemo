@@ -1,0 +1,596 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name RNGBLE
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CoreBluetooth
+import Foundation
+import QuartzCore
+@_exported import RNGBLE
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public typealias RNGPeripheral = CoreBluetooth.CBPeripheral
+public typealias RNGCharacteristic = CoreBluetooth.CBCharacteristic
+public typealias RNGCentralManager = CoreBluetooth.CBCentralManager
+public typealias RNGCharacteristicWriteType = CoreBluetooth.CBCharacteristicWriteType
+public enum RNGCommandBattery : RNGBLE.RNGCommandProtocol {
+  case SKU(_: Swift.UInt8 = 0xFF)
+  case Address(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case ChargingDischarging(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case cellVolts(_: Swift.UInt8)
+  case maxMinTemperatures(_: Swift.UInt8)
+  case currAmps(_: Swift.UInt8)
+  case volts(_: Swift.UInt8)
+  case remainingAh(_: Swift.UInt8)
+  case totalAhPercentageAh(_: Swift.UInt8)
+  case errListHeatingModuleStatus(_: Swift.UInt8)
+  case selfDevelopedBatteryInfo(_: Swift.UInt8)
+  case softwareVersion(_: Swift.UInt8)
+  case SN(_: Swift.UInt8)
+  case notiDevice1
+  case notiDevice2
+  case notiDevice3
+  case notiAddressBatteryList
+  case configAddressBatteryList(_: Swift.UInt8)
+  case shakeAddressBatteryList(_: Swift.UInt8)
+  case checkAddressBatteryList(_: Swift.UInt8)
+  case getAddressInverter
+  case getAddressBattery
+  case getSKUInverter(_: Swift.UInt8)
+  case setAddressInverter(_: Swift.UInt8, _: Swift.UInt8)
+  case getSKUBattery(_: Swift.UInt8)
+  case setAddressBattery(_: Swift.UInt8, _: Swift.UInt8)
+  case setParams(_: Swift.UInt8, _: [Swift.UInt8], _: [Swift.UInt8])
+  case set(_: Swift.UInt8, pdu: Swift.UInt16, val: Swift.UInt16)
+  case SKU_MaxBatt
+  public var funcCode: Swift.UInt8 {
+    get
+  }
+  public var pdu: Swift.UInt16 {
+    get
+  }
+  public var writeData: Foundation.Data {
+    get
+  }
+  public var writeData16HStr: Swift.String {
+    get
+  }
+  public var maxReceivedTime: Foundation.TimeInterval {
+    get
+  }
+  public var minReceivedTime: Foundation.TimeInterval {
+    get
+  }
+  public var needSendTimeOut: Swift.Bool {
+    get
+  }
+  public var hasTwiceResponse: Swift.Bool {
+    get
+  }
+  public var is2000Inverter: Swift.Bool {
+    get
+  }
+  public var isOTAInfo: Swift.Bool {
+    get
+  }
+  public var characteristicWriteType: RNGBLE.RNGCharacteristicWriteType {
+    get
+  }
+}
+extension RNGBLE.RNGCommandBattery {
+  public func getData(_ currModel: RNGBLE.BLEBatteryModel?, receivedList: [Swift.Int], deviceSku: Swift.String) -> RNGBLE.BLEBatteryModel
+}
+extension Swift.String {
+  public var isController_WND10: Swift.Bool {
+    get
+  }
+  public var isRIVPCH: Swift.Bool {
+    get
+  }
+  public var isPhoenix: Swift.Bool {
+    get
+  }
+  public var isDCC: Swift.Bool {
+    get
+  }
+  public var isCombinerBox: Swift.Bool {
+    get
+  }
+}
+public enum RNGCommandInverter : RNGBLE.RNGCommandProtocol {
+  case SKU(_: Swift.UInt8 = 0xFF)
+  case address(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case outputVoltage(_: Swift.UInt8 = 0xFF)
+  case outputAmps(_: Swift.UInt8 = 0xFF)
+  case outputFrequency(_: Swift.UInt8 = 0xFF)
+  case batteryVoltage(_: Swift.UInt8 = 0xFF)
+  case temperature(_: Swift.UInt8 = 0xFF)
+  case errList_x0FA7(_: Swift.UInt8 = 0xFF)
+  case mode(_: Swift.UInt8 = 0xFF)
+  case errList_x112E_4(_: Swift.UInt8 = 0xFF)
+  public var funcCode: Swift.UInt8 {
+    get
+  }
+  public var pdu: Swift.UInt16 {
+    get
+  }
+  public var writeData: Foundation.Data {
+    get
+  }
+  public var writeData16HStr: Swift.String {
+    get
+  }
+  public var maxReceivedTime: Foundation.TimeInterval {
+    get
+  }
+  public var minReceivedTime: Foundation.TimeInterval {
+    get
+  }
+  public var needSendTimeOut: Swift.Bool {
+    get
+  }
+  public var hasTwiceResponse: Swift.Bool {
+    get
+  }
+  public var is2000Inverter: Swift.Bool {
+    get
+  }
+  public var isOTAInfo: Swift.Bool {
+    get
+  }
+  public var characteristicWriteType: RNGBLE.RNGCharacteristicWriteType {
+    get
+  }
+}
+extension RNGBLE.RNGCommandInverter {
+  public func getData(_ currModel: RNGBLE.BLEInverterModel?, receivedList: [Swift.Int]) -> RNGBLE.BLEInverterModel
+}
+extension RNGBLE.RNGCommandInverter {
+  public static func getSKU(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ success: Swift.Bool, _ SKU: Swift.String?) -> ())
+  public static func getAddress(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, resultClosure: @escaping (_ success: Swift.Bool, _ address: Swift.UInt8?) -> ())
+}
+extension CoreBluetooth.CBPeripheral {
+  public var RSSIIntValue: Swift.Int? {
+    get
+    set
+  }
+  public var macAddress: Swift.String? {
+    get
+    set
+  }
+  public func isEqualTo(_ p: RNGBLE.RNGPeripheral) -> Swift.Bool
+  public var isAura: Swift.Bool {
+    get
+  }
+  public var isMaxBattery: Swift.Bool {
+    get
+  }
+  public var isSSLBAT: Swift.Bool {
+    get
+  }
+}
+extension CoreBluetooth.CBPeripheral {
+  public func isController(_ manager: RNGBLE.RNGBLEManager?, resultClosure: @escaping (_ isController: Swift.Bool, _ SKU: Swift.String?) -> ())
+  public func isInverter(_ manager: RNGBLE.RNGBLEManager?, resultClosure: @escaping (_ isInverter: Swift.Bool, _ address_deviceSku: (address: Swift.UInt8, deviceSku: Swift.String)?) -> ())
+  public func isBattery(_ manager: RNGBLE.RNGBLEManager?, resultClosure: @escaping (_ isBattery: Swift.Bool, _ address_deviceSku: (address: Swift.UInt8, deviceSku: Swift.String)?) -> ())
+}
+public protocol RNGBLEManagerDelegate {
+  func centralManagerDidUpdateState(_ central: RNGBLE.RNGCentralManager, msg: Swift.String?)
+  func centralManager(_ central: RNGBLE.RNGCentralManager, didDiscover peripheral: RNGBLE.RNGPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  func centralManager(_ central: RNGBLE.RNGCentralManager, didDisconnectPeripheral peripheral: RNGBLE.RNGPeripheral, error: (any Swift.Error)?)
+  func peripheral(_ peripheral: RNGBLE.RNGPeripheral, didUpdateNotificationStateFor characteristic: RNGBLE.RNGCharacteristic, error: (any Swift.Error)?)
+  func peripheral(_ peripheral: RNGBLE.RNGPeripheral, didUpdateValueFor characteristic: RNGBLE.RNGCharacteristic, error: (any Swift.Error)?)
+  func commandWillSend(_ command: any RNGBLE.RNGCommandProtocol)
+  func commandSendResult()
+}
+public struct RNGBLEServiceCharacteristic {
+}
+@objc @_inheritsConvenienceInitializers public class RNGBLEManager : ObjectiveC.NSObject {
+  public var delegate: (any RNGBLE.RNGBLEManagerDelegate)?
+  public var centralManager: CoreBluetooth.CBCentralManager {
+    get
+    set
+  }
+  @objc override dynamic public init()
+  public init(serviceCharacteristic: RNGBLE.RNGBLEServiceCharacteristic)
+  public func scanDevice()
+  public func connect(_ peripheral: RNGBLE.RNGPeripheral)
+  public func cleanup(_ peripheral: RNGBLE.RNGPeripheral)
+  @objc deinit
+}
+extension RNGBLE.RNGBLEManager : CoreBluetooth.CBCentralManagerDelegate {
+  @objc dynamic public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
+}
+extension RNGBLE.RNGBLEManager : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+}
+extension RNGBLE.RNGBLEManager {
+  public func send(_ peripheral: RNGBLE.RNGPeripheral, commandList: [any RNGBLE.RNGCommandProtocol], commandsAllSend: Swift.Bool = false, retryTimes: Swift.Int = 0, singleClosure: ((_ singleSuccess: Swift.Bool, _ commandIdx: Swift.Int, _ command: any RNGBLE.RNGCommandProtocol, _ receivedList: [Swift.Int]?) -> ())? = nil, resultClosure: ((_ totalSucceed: Swift.Bool, _ hasSingleSucceed: Swift.Bool) -> ())? = nil)
+}
+public enum RNGCommandController : RNGBLE.RNGCommandProtocol {
+  case SKU(_: Swift.UInt8 = 0xFF)
+  case address(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case batterySOC(_: Swift.UInt8 = 0xFF)
+  case batteryChargingVolts(_: Swift.UInt8 = 0xFF)
+  case batteryChargingAmps(_: Swift.UInt8 = 0xFF)
+  case temperatures(_: Swift.UInt8 = 0xFF)
+  case dcVolts(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case dcAmps(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case dcWatts(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case pvVolts(_: Swift.UInt8 = 0xFF)
+  case pvAmps(_: Swift.UInt8 = 0xFF)
+  case pvChargingWatts(_: Swift.UInt8 = 0xFF)
+  case powerGenerationToday(_: Swift.UInt8 = 0xFF)
+  case totalRunningDays(_: Swift.UInt8 = 0xFF)
+  case batteryTotalDiscTimes(_: Swift.UInt8 = 0xFF)
+  case batteryTotalCharTimes(_: Swift.UInt8 = 0xFF)
+  case batteryAhChar(_: Swift.UInt8 = 0xFF)
+  case batteryAhDisc(_: Swift.UInt8 = 0xFF)
+  case powerGeneration(_: Swift.UInt8 = 0xFF)
+  case powerUse(_: Swift.UInt8 = 0xFF)
+  case isOnLoad_chargeStatus(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case errList(_: Swift.UInt8 = 0xFF)
+  case voltSystem(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case batteryType(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case voltEqualization(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case voltBoost(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case voltFloat(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case voltLowReconnect(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case voltUnderRecoverWarning(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case voltLowDisconnect(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case timeBoost(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case loadMode(_: Swift.UInt8 = 0xFF, funcCode: RNGBLE.RNGCommandFuncCode = .get(0x01))
+  case getSoftwareVersion(_: Swift.UInt8 = 0xFF)
+  case getHardwareVersion(_: Swift.UInt8 = 0xFF)
+  case getHistory(_: Swift.UInt8, pdu: Swift.UInt16)
+  case setLoadOnOff(_: Swift.UInt8 = 0xFF, isOnLoad: Swift.Bool)
+  public var funcCode: Swift.UInt8 {
+    get
+  }
+  public var pdu: Swift.UInt16 {
+    get
+  }
+  public var writeData: Foundation.Data {
+    get
+  }
+  public var writeData16HStr: Swift.String {
+    get
+  }
+  public var maxReceivedTime: Foundation.TimeInterval {
+    get
+  }
+  public var minReceivedTime: Foundation.TimeInterval {
+    get
+  }
+  public var needSendTimeOut: Swift.Bool {
+    get
+  }
+  public var hasTwiceResponse: Swift.Bool {
+    get
+  }
+  public var is2000Inverter: Swift.Bool {
+    get
+  }
+  public var isOTAInfo: Swift.Bool {
+    get
+  }
+  public var characteristicWriteType: RNGBLE.RNGCharacteristicWriteType {
+    get
+  }
+}
+extension RNGBLE.RNGCommandController {
+  public func getData(_ currModel: RNGBLE.BLEControllerModel?, deviceSku: Swift.String?, receivedList: [Swift.Int]) -> RNGBLE.BLEControllerModel
+}
+extension RNGBLE.RNGCommandController {
+  public static func getSKU(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ success: Swift.Bool, _ SKU: Swift.String?) -> ())
+  public static func getAddress(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, resultClosure: @escaping (_ address: Swift.Int) -> ())
+  public static func getBatterySOC(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ SOC: Swift.Int) -> ())
+  public static func getBatteryChargingVolts(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ batteryChargingVolts: Swift.Double) -> ())
+  public static func getBatteryChargingAmps(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ batteryChargingAmps: Swift.Double) -> ())
+  public static func getTemperatures(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ controllerTemperature: Swift.Int, _ batteryTemperature: Swift.Int) -> ())
+  public static func getDCVolts(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ dcVolts: Swift.Double) -> ())
+  public static func getDCAmps(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ dcAmps: Swift.Double) -> ())
+  public static func getDCWatts(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ dcWatts: Swift.Int) -> ())
+  public static func getPVVolts(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ pvVolts: Swift.Double) -> ())
+  public static func getPVAmps(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ pvAmps: Swift.Double) -> ())
+  public static func getPVChargingWatts(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ pvChargingWatts: Swift.Int) -> ())
+  public static func getPowerGenerationToday(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ powerGenerationToday: Swift.Double) -> ())
+  public static func getTotalRunningDays(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ totalRunningDays: Swift.Int) -> ())
+  public static func getBatteryTotalDiscTimes(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ batteryTotalDiscTimes: Swift.Int) -> ())
+  public static func getBatteryTotalCharTimes(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ batteryTotalCharTimes: Swift.Int) -> ())
+  public static func getBatteryAhChar(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ batteryAhChar: Swift.Int) -> ())
+  public static func getBatteryAhDisc(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ batteryAhDisc: Swift.Int64) -> ())
+  public static func getPowerGeneration(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ powerGeneration: Swift.Double) -> ())
+  public static func getPowerUse(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ powerUse: Swift.Double) -> ())
+  public static func getIsOnLoadChargeStatus(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ isOnLoad: Swift.Bool, _ chargeStatus: RNGBLE.BLEControllerChargeMode?) -> ())
+  public static func getErrorList(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, deviceSku: Swift.String?, resultClosure: @escaping (_ errList: [RNGBLE.RNGBLEErrorModel]) -> ())
+  public static func getVoltSystem(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ voltSystem: RNGBLE.ControllerSystemVolt?) -> ())
+  public static func setVoltSystem(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: RNGBLE.ControllerSystemVolt, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getBatteryType(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, SKU: Swift.String, resultClosure: @escaping (_ batteryType: RNGBLE.ControllerBatteryType?) -> ())
+  public static func setBatteryType(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: RNGBLE.ControllerBatteryType, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getVoltEqualization(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ voltEqualization: Swift.Double) -> ())
+  public static func setVoltEqualization(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: Swift.UInt16, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getVoltBoost(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ voltBoost: Swift.Double) -> ())
+  public static func setVoltBoost(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: Swift.UInt16, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getVoltFloat(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ voltFloat: Swift.Double) -> ())
+  public static func setVoltFloat(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: Swift.UInt16, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getVoltLowReconnect(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ voltLowReconnect: Swift.Double) -> ())
+  public static func setVoltLowReconnect(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: Swift.UInt16, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getVoltUnderRecoverWarning(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ voltUnderRecoverWarning: Swift.Double) -> ())
+  public static func setVoltUnderRecoverWarning(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: Swift.UInt16, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getVoltLowDisconnect(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ voltLowDisconnect: Swift.Double) -> ())
+  public static func setVoltLowDisconnect(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: Swift.UInt16, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getTimeBoost(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ timeBoost: Swift.Int) -> ())
+  public static func setTimeBoost(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: Swift.UInt16, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getLoadMode(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, resultClosure: @escaping (_ intVal: Swift.Int, _ loadMode: RNGBLE.LoadMode_Controller?) -> ())
+  public static func setLoadMode(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, newValue: RNGBLE.LoadMode_Controller, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+  public static func getHistory(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, address: Swift.UInt8, targetDay: Swift.Int, resultClosure: @escaping (_ model: RNGBLE.BLEControllerHistoryModel) -> ())
+  public static func setLoadOnOff(_ manager: RNGBLE.RNGBLEManager?, peripheral: RNGBLE.RNGPeripheral, currLoadMode: RNGBLE.LoadMode_Controller, address: Swift.UInt8, isOnLoad: Swift.Bool, resultClosure: @escaping (_ success: Swift.Bool) -> ())
+}
+public enum BLEControllerChargeMode : Swift.Int {
+  case notCharging
+  case bulk
+  case equalization
+  case boost
+  case float
+  case currentLimit
+  public var localized: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CoreControllerChargeMode : Swift.Int64 {
+  case NOTCHARGING
+  case STARTCHARGING
+  case MPPT
+  case EQUALIZATION
+  case BOOST
+  case FLOAT
+  case UNKNOWN_DISABLE
+  case NOTCHARGING8
+  case BULK
+  case ABSORPTION
+  case OVERCHARGE
+  case EQUALIZATION12
+  case FLOAT13
+  case CONSTANTVOLTCURR
+  public var localized: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int64)
+  public typealias RawValue = Swift.Int64
+  public var rawValue: Swift.Int64 {
+    get
+  }
+}
+public enum ControllerBatteryType {
+  case User
+  case Flooded
+  case Sealed_AGM
+  case Sealed
+  case AGM
+  case Gel
+  case Li
+  case Li36
+  case Li48
+  public var localized: Swift.String {
+    get
+  }
+  public var settingData: Swift.UInt16 {
+    get
+  }
+  public static func getDCCBattertType(_ intVal: Swift.Int) -> RNGBLE.ControllerBatteryType?
+  public static func getCtrlBattertType(_ intVal: Swift.Int, sku: Swift.String?) -> RNGBLE.ControllerBatteryType
+  public static func == (a: RNGBLE.ControllerBatteryType, b: RNGBLE.ControllerBatteryType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum LoadMode_Controller : Swift.UInt16 {
+  case lightControl, lightControl1h, lightControl2h, lightControl3h, lightControl4h, lightControl5h, lightControl6h, lightControl7h, lightControl8h, lightControl9h, lightControl10h, lightControl11h, lightControl12h, lightControl13h, lightControl14h, manualMode, debugMode, alwaysOnMode
+  public var localized: Swift.String? {
+    get
+  }
+  public init?(rawValue: Swift.UInt16)
+  public typealias RawValue = Swift.UInt16
+  public var rawValue: Swift.UInt16 {
+    get
+  }
+}
+public enum ControllerSystemVolt : Swift.Int {
+  case _12
+  case _24
+  case _36
+  case _48
+  case auto
+  public var localized: Swift.String {
+    get
+  }
+  public var settingData: Swift.UInt16 {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class BLEControllerModel : ObjectiveC.NSObject {
+  public var deviceSku: Swift.String?
+  public var deviceAddress: Swift.Int?
+  public var batterySOC: Swift.Int?
+  public var batteryChargingVolts: Swift.Double?
+  public var batteryChargingAmps: Swift.Double?
+  public var batteryChargingPower: Swift.Double?
+  public var controllerTemperature: Swift.Int?
+  public var batteryTemperature: Swift.Int?
+  public var dcVolts: Swift.Double?
+  public var dcAmps: Swift.Double?
+  public var dcWatts: Swift.Int?
+  public var pvChargingWatts: Swift.Int?
+  public var loadMode: RNGBLE.LoadMode_Controller?
+  public var pvVolts: Swift.Double?
+  public var pvAmps: Swift.Double?
+  public var powerGenerationToday: Swift.Double?
+  public var totalRunningDays: Swift.Int?
+  public var batteryTotalDiscTimes: Swift.Int?
+  public var batteryTotalCharTimes: Swift.Int?
+  public var batteryAhChar: Swift.Int?
+  public var batteryAhDisc: Swift.Int64?
+  public var powerGeneration: Swift.Double?
+  public var powerUse: Swift.Double?
+  public var isOnLoad: Swift.Bool?
+  public var chargeStatus: RNGBLE.BLEControllerChargeMode?
+  public var voltSystem: RNGBLE.ControllerSystemVolt?
+  public var batteryType: RNGBLE.ControllerBatteryType?
+  public var voltEqualization: Swift.Double?
+  public var voltBoost: Swift.Double?
+  public var voltFloat: Swift.Double?
+  public var voltLowReconnect: Swift.Double?
+  public var voltUnderRecoverWarning: Swift.Double?
+  public var voltLowDisconnect: Swift.Double?
+  public var timeBoost: Swift.Int?
+  public var errList: [RNGBLE.RNGBLEErrorModel]
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct BLEControllerHistoryModel {
+  public var bVoltLow: Swift.Double
+  public var bVoltMax: Swift.Double
+  public var ahCharMax: Swift.Double
+  public var powerCharMax: Swift.Int
+  public var powerDiscMax: Swift.Int
+  public var ahChar: Swift.Int
+  public var ahDisc: Swift.Int
+  public var powerGenerate: Swift.Double
+  public var powerUse: Swift.Double
+}
+public enum BLEInverterMode : Swift.Int {
+  case normal
+  case eco
+  case shutdown
+  public var localized: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class BLEInverterModel : ObjectiveC.NSObject {
+  public var outputVoltage: Swift.Double?
+  public var outputAmps: Swift.Double?
+  public var outputPower: Swift.Double?
+  public var outputFrequency: Swift.Double?
+  public var batteryVoltage: Swift.Double?
+  public var temperature: Swift.Double?
+  public var mode: RNGBLE.BLEInverterMode?
+  public var errList: [RNGBLE.RNGBLEErrorModel]
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct RNGBLEErrorModel : Swift.Codable {
+  public var code: Swift.Int, message: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RNGBLETools {
+  public static func getASCII(with list: [Swift.Int]) -> Swift.String
+  public static func decTobin(_ number: Swift.Int) -> Swift.String
+  public static func getSignedValue16(_ val: Swift.Int) -> Swift.Int
+  public static func getSignedValue32(_ val: Swift.Int64) -> Swift.Int64
+  public static func convertBinMakeUpZero(_ val: Swift.Int, length: Swift.Int = 16) -> Swift.String
+  public static func calculateCRC16Modbus(_ data: [Swift.UInt8]) -> Swift.UInt16
+  public static func convertToHexString(_ data: Foundation.NSData) -> Swift.String
+}
+@objc @_inheritsConvenienceInitializers public class BLEBatteryModel : ObjectiveC.NSObject {
+  public var Address: Swift.Int?
+  public var s1475: Swift.String?
+  public var Charging: Swift.Bool?
+  public var Discharging: Swift.Bool?
+  public var cellVolts: [Swift.Double]
+  public var maxCellTemperature: Swift.Double?
+  public var minCellTemperature: Swift.Double?
+  public var currAmps: Swift.Double?
+  public var volts: Swift.Double?
+  public var remainingAh: Swift.Double?
+  public var totalAh: Swift.Double?
+  public var percentageAh: Swift.Double?
+  public var heatingModuleStatus: Swift.Bool?
+  public var ManufactureVersion: Swift.String?
+  public var MainLineVersion: Swift.String?
+  public var CommunicationProtocolVersion: Swift.String?
+  public var Model: Swift.String?
+  public var softwareVersion: Swift.String?
+  public var ManufacturerName: Swift.String?
+  public var SN: Swift.String?
+  public var errList: [RNGBLE.RNGBLEErrorModel]
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum RNGCommandFuncCode {
+  case get(_: Swift.UInt16)
+  case set(_: Swift.UInt16)
+  public var value: Swift.UInt8 {
+    get
+  }
+}
+public protocol RNGCommandProtocol {
+  var funcCode: Swift.UInt8 { get }
+  var pdu: Swift.UInt16 { get }
+  var writeData: Foundation.Data { get }
+  var writeData16HStr: Swift.String { get }
+  var maxReceivedTime: Foundation.TimeInterval { get }
+  var minReceivedTime: Foundation.TimeInterval { get }
+  var needSendTimeOut: Swift.Bool { get }
+  var hasTwiceResponse: Swift.Bool { get }
+  var is2000Inverter: Swift.Bool { get }
+  var isOTAInfo: Swift.Bool { get }
+  var characteristicWriteType: RNGBLE.RNGCharacteristicWriteType { get }
+}
+extension RNGBLE.RNGCommandProtocol {
+  public func getIntVal(_ receivedList: [Swift.Int], printLog: Swift.String) -> Swift.Int?
+  public func getDoubleVal(_ receivedList: [Swift.Int], multiples: Swift.Double, printLog: Swift.String) -> Swift.Double?
+  public func getDoubleVal_SignedValue(_ receivedList: [Swift.Int], multiples: Swift.Double, printLog: Swift.String) -> Swift.Double?
+  public func getDouble32Val(_ receivedList: [Swift.Int], multiples: Swift.Double, printLog: Swift.String) -> Swift.Double?
+  public func getDouble32_SignedValue(_ receivedList: [Swift.Int], multiples: Swift.Double, printLog: Swift.String) -> Swift.Double?
+  public func getBoolVal(_ receivedList: [Swift.Int], printLog: Swift.String) -> Swift.Bool?
+  public func getSoftwareVersion(_ receivedList: [Swift.Int], printLog: Swift.String) -> Swift.String?
+  public func getSN(_ receivedList: [Swift.Int], printLog: Swift.String) -> Swift.String?
+}
+@_hasMissingDesignatedInitializers public class LanguageManager {
+  public static let share: RNGBLE.LanguageManager
+  public func setLanguage(_ name: Swift.String)
+  @objc deinit
+}
+extension RNGBLE.BLEControllerChargeMode : Swift.Equatable {}
+extension RNGBLE.BLEControllerChargeMode : Swift.Hashable {}
+extension RNGBLE.BLEControllerChargeMode : Swift.RawRepresentable {}
+extension RNGBLE.CoreControllerChargeMode : Swift.Equatable {}
+extension RNGBLE.CoreControllerChargeMode : Swift.Hashable {}
+extension RNGBLE.CoreControllerChargeMode : Swift.RawRepresentable {}
+extension RNGBLE.ControllerBatteryType : Swift.Equatable {}
+extension RNGBLE.ControllerBatteryType : Swift.Hashable {}
+extension RNGBLE.LoadMode_Controller : Swift.Equatable {}
+extension RNGBLE.LoadMode_Controller : Swift.Hashable {}
+extension RNGBLE.LoadMode_Controller : Swift.RawRepresentable {}
+extension RNGBLE.ControllerSystemVolt : Swift.Equatable {}
+extension RNGBLE.ControllerSystemVolt : Swift.Hashable {}
+extension RNGBLE.ControllerSystemVolt : Swift.RawRepresentable {}
+extension RNGBLE.BLEInverterMode : Swift.Equatable {}
+extension RNGBLE.BLEInverterMode : Swift.Hashable {}
+extension RNGBLE.BLEInverterMode : Swift.RawRepresentable {}

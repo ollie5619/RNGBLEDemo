@@ -16,7 +16,7 @@ class DetailVC: UIViewController {
     private let textV = UITextView()
     weak var bleManager: RNGBLEManager?
     var currPeripheral: RNGPeripheral!
-    private var controllerSKU: String?, model_ctrl = BLEControllerModel(), model_riv = BLEInverterModel()
+    private var controllerSKU: String?, model_ctrl = BLEControllerModel(), model_riv = BLEInverterModel(), model_batt = BLEBatteryModel()
     deinit {
         disconnectBtn_action(disconnectBtn)
     }
@@ -57,51 +57,7 @@ class DetailVC: UIViewController {
         ToastManager.share.loading(in: view)
         currPeripheral.isController(bleManager) { isController, SKU in
             guard isController, let SKU else {
-                self.currPeripheral.isInverter(self.bleManager) { isInverter, address_deviceSku in
-                    ToastManager.share.stopLoading()
-                    guard isInverter, let address_deviceSku else {
-                        self.textV.text = """
-                        BLE Mac: \(self.currPeripheral.macAddress ?? "")
-                        BLE UUID: \(self.currPeripheral.identifier.uuidString)
-                        Device Type: Temporarily unsupported device type
-                        """
-                        self.textV.sizeToFit()
-                        return
-                    }
-                    let address: UInt8 = 0xFF
-                    self.bleManager?.send(self.currPeripheral, commandList: [
-                        RNGCommandInverter.address(address),
-                        RNGCommandInverter.outputVoltage(address),
-                        RNGCommandInverter.outputAmps(address),
-                        RNGCommandInverter.outputFrequency(address),
-                        RNGCommandInverter.batteryVoltage(address),
-                        RNGCommandInverter.temperature(address),
-                        RNGCommandInverter.errList_x0FA7(address),
-                        RNGCommandInverter.mode(address),
-                        RNGCommandInverter.errList_x112E_4(address),
-                    ], commandsAllSend: true) { singleSuccess, commandIdx, command, receivedList in
-                        guard singleSuccess, let command = command as? RNGCommandInverter, let receivedList else { return }
-                        self.model_riv = command.getData(self.model_riv, receivedList: receivedList)
-                        self.textV.text = """
-                        BLE Mac: \(self.currPeripheral.macAddress ?? "")
-                        BLE UUID: \(self.currPeripheral.identifier.uuidString)
-                        Device Type: Inverter
-                        
-                        Device Address: \(address_deviceSku.address)
-                        Device SKU: \(address_deviceSku.deviceSku)
-                        outputVoltage: \(self.model_riv.outputVoltage?.decimalStringValue() ?? "") V
-                        outputAmps: \(self.model_riv.outputAmps?.decimalStringValue() ?? "") A
-                        outputPower: \(self.model_riv.outputPower?.decimalStringValue() ?? "") W
-                        outputFrequency: \(self.model_riv.outputFrequency?.decimalStringValue() ?? "") Hz
-                        batteryVoltage: \(self.model_riv.batteryVoltage?.decimalStringValue() ?? "") V
-                        temperature: \(self.model_riv.temperature?.decimalStringValue() ?? "") ℃
-                        mode: \(self.model_riv.mode?.localized ?? "")
-                        
-                        errList: \(self.model_riv.errList.map { $0.message } )
-                        """
-                        self.textV.sizeToFit()
-                    }
-                }
+                self.getInverter()
                 return
             }
             ToastManager.share.stopLoading()
@@ -194,6 +150,107 @@ class DetailVC: UIViewController {
             }
         }
     }
+    private func getInverter() {
+        currPeripheral.isInverter(bleManager) { isInverter, address_deviceSku in
+            ToastManager.share.stopLoading()
+            guard isInverter, let address_deviceSku else {
+                self.getBattery()
+                return
+            }
+            let address: UInt8 = 0xFF
+            self.bleManager?.send(self.currPeripheral, commandList: [
+                RNGCommandInverter.address(address),
+                RNGCommandInverter.outputVoltage(address),
+                RNGCommandInverter.outputAmps(address),
+                RNGCommandInverter.outputFrequency(address),
+                RNGCommandInverter.batteryVoltage(address),
+                RNGCommandInverter.temperature(address),
+                RNGCommandInverter.errList_x0FA7(address),
+                RNGCommandInverter.mode(address),
+                RNGCommandInverter.errList_x112E_4(address),
+            ], commandsAllSend: true) { singleSuccess, commandIdx, command, receivedList in
+                guard singleSuccess, let command = command as? RNGCommandInverter, let receivedList else { return }
+                self.model_riv = command.getData(self.model_riv, receivedList: receivedList)
+                self.textV.text = """
+                BLE Mac: \(self.currPeripheral.macAddress ?? "")
+                BLE UUID: \(self.currPeripheral.identifier.uuidString)
+                Device Type: Battery
+                
+                Device Address: \(address_deviceSku.address)
+                Device SKU: \(address_deviceSku.deviceSku)
+                outputVoltage: \(self.model_riv.outputVoltage?.decimalStringValue() ?? "") V
+                outputAmps: \(self.model_riv.outputAmps?.decimalStringValue() ?? "") A
+                outputPower: \(self.model_riv.outputPower?.decimalStringValue() ?? "") W
+                outputFrequency: \(self.model_riv.outputFrequency?.decimalStringValue() ?? "") Hz
+                batteryVoltage: \(self.model_riv.batteryVoltage?.decimalStringValue() ?? "") V
+                temperature: \(self.model_riv.temperature?.decimalStringValue() ?? "") ℃
+                mode: \(self.model_riv.mode?.localized ?? "")
+                
+                errList: \(self.model_riv.errList.map { $0.message } )
+                """
+                self.textV.sizeToFit()
+            }
+        }
+    }
+    private func getBattery() {
+        currPeripheral.isBattery(bleManager) { isBattery, address_deviceSku in
+            ToastManager.share.stopLoading()
+            guard isBattery, let address_deviceSku else {
+                self.textV.text = """
+                BLE Mac: \(self.currPeripheral.macAddress ?? "")
+                BLE UUID: \(self.currPeripheral.identifier.uuidString)
+                Device Type: Temporarily unsupported device type
+                """
+                self.textV.sizeToFit()
+                return
+            }
+            let address: UInt8 = 0xFF
+            self.bleManager?.send(self.currPeripheral, commandList: [
+                RNGCommandBattery.Address(address),
+                RNGCommandBattery.ChargingDischarging(address),
+                RNGCommandBattery.cellVolts(address),
+                RNGCommandBattery.maxMinTemperatures(address),
+                RNGCommandBattery.currAmps(address),
+                RNGCommandBattery.volts(address),
+                RNGCommandBattery.remainingAh(address),
+                RNGCommandBattery.totalAhPercentageAh(address),
+                RNGCommandBattery.errListHeatingModuleStatus(address),
+                RNGCommandBattery.selfDevelopedBatteryInfo(address),
+                RNGCommandBattery.softwareVersion(address),
+                RNGCommandBattery.SN(address),
+            ], commandsAllSend: true) { singleSuccess, commandIdx, command, receivedList in
+                guard singleSuccess, let command = command as? RNGCommandBattery, let receivedList else { return }
+                self.model_batt = command.getData(self.model_batt, receivedList: receivedList, deviceSku: address_deviceSku.deviceSku)
+                self.textV.text = """
+                BLE Mac: \(self.currPeripheral.macAddress ?? "")
+                BLE UUID: \(self.currPeripheral.identifier.uuidString)
+                Device Type: Inverter
+                
+                Device Address: \(address_deviceSku.address)
+                Device SKU: \(address_deviceSku.deviceSku)
+                cellVolts: \(self.model_batt.cellVolts)
+                maxCellTemperature: \(self.model_batt.maxCellTemperature?.decimalStringValue() ?? "") ℃
+                minCellTemperature: \(self.model_batt.minCellTemperature?.decimalStringValue() ?? "") ℃
+                currAmps: \(self.model_batt.currAmps?.decimalStringValue() ?? "") A
+                volts: \(self.model_batt.volts?.decimalStringValue() ?? "") V
+                remainingAh: \(self.model_batt.remainingAh?.decimalStringValue() ?? "") Ah
+                totalAh: \(self.model_batt.totalAh?.decimalStringValue() ?? "") Ah
+                percentageAh: \(self.model_batt.percentageAh?.decimalStringValue() ?? "") Ah
+                heatingModuleStatus: \(self.model_batt.heatingModuleStatus ?? false)
+                ManufactureVersion: \(self.model_batt.ManufactureVersion ?? "")
+                MainLineVersion: \(self.model_batt.MainLineVersion ?? "")
+                CommunicationProtocolVersion: \(self.model_batt.CommunicationProtocolVersion ?? "")
+                Model: \(self.model_batt.Model ?? "")
+                softwareVersion: \(self.model_batt.softwareVersion ?? "")
+                ManufacturerName: \(self.model_batt.ManufacturerName ?? "")
+                SN: \(self.model_batt.SN ?? "")
+                
+                errList: \(self.model_batt.errList.map { $0.message } )
+                """
+                self.textV.sizeToFit()
+            }
+        }
+    }
     private func readHistory() {
         let address: UInt8 = 0xFF
         RNGCommandController.getHistory(bleManager, peripheral: currPeripheral, address: address, targetDay: 0) { model in
@@ -227,7 +284,7 @@ class DetailVC: UIViewController {
     }
 }
 extension DetailVC: RNGBLEManagerDelegate {
-    func centralManagerDidUpdateState(_ central: RNGCentralManager) {
+    func centralManagerDidUpdateState(_ central: RNGBLE.RNGCentralManager, msg: String?) {
         switch central.state {
         case .poweredOff:
             bleStateL.text = "BLE Closed"

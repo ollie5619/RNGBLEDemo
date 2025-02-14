@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1324A6DE2A73B6EF00D5D506 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1324A6DD2A73B6EF00D5D506 /* ToastManager.swift */; };
 		1324A6E02A73B89A00D5D506 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1324A6DF2A73B89A00D5D506 /* DetailVC.swift */; };
-		136D670F2D13B3B200F75FD1 /* RNGBLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D670B2D13B2A000F75FD1 /* RNGBLE.framework */; };
-		136D67102D13B3B200F75FD1 /* RNGBLE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 136D670B2D13B2A000F75FD1 /* RNGBLE.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		137CFFD62A73937100406150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CFFD52A73937100406150 /* AppDelegate.swift */; };
 		137CFFD82A73937100406150 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CFFD72A73937100406150 /* SceneDelegate.swift */; };
 		137CFFDA2A73937100406150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CFFD92A73937100406150 /* ViewController.swift */; };
@@ -46,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				136D67102D13B3B200F75FD1 /* RNGBLE.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +53,6 @@
 /* Begin PBXFileReference section */
 		1324A6DD2A73B6EF00D5D506 /* ToastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
 		1324A6DF2A73B89A00D5D506 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		136D670B2D13B2A000F75FD1 /* RNGBLE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RNGBLE.framework; sourceTree = "<group>"; };
 		137CFFD22A73937100406150 /* BLEDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		137CFFD52A73937100406150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137CFFD72A73937100406150 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +66,7 @@
 		137CFFF22A73937200406150 /* BLEDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		137CFFF62A73937200406150 /* BLEDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDemoUITests.swift; sourceTree = "<group>"; };
 		137CFFF82A73937200406150 /* BLEDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1381C10B2D5F2B53003B9A62 /* RNGBLE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RNGBLE.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				136D670F2D13B3B200F75FD1 /* RNGBLE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +97,7 @@
 		137C00072A73A68200406150 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				136D670B2D13B2A000F75FD1 /* RNGBLE.framework */,
+				1381C10B2D5F2B53003B9A62 /* RNGBLE.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -360,6 +356,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WFJMR5RQ6M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -380,6 +380,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WFJMR5RQ6M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -399,6 +403,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WFJMR5RQ6M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.renogy.BLEDemoUITests;
@@ -417,6 +425,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WFJMR5RQ6M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.renogy.BLEDemoUITests;

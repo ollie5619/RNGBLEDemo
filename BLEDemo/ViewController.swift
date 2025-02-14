@@ -86,22 +86,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 extension ViewController: RNGBLEManagerDelegate {
-    func centralManagerDidUpdateState(_ central: RNGCentralManager) {
+    func centralManagerDidUpdateState(_ central: RNGBLE.RNGCentralManager, msg: String?) {
         switch central.state {
         case .poweredOn: scanDevice()
         case .poweredOff: // Turning off Bluetooth doesn't go to the Bluetooth disconnect callback, it needs to be processed again
-            ToastManager.share.showErr(in: view, text: "Bluetooth is not powered on")
+            ToastManager.share.showErr(in: view, text: msg)
             scanPeripherals.removeAll() // Turn off Bluetooth reset
             tableV.reloadData()
-        case .unauthorized:
-            if #available(iOS 13.0, *) {
-                switch central.authorization {
-                case .denied: ToastManager.share.showErr(in: view, text: "You are not authorized to use bluetooth")
-                case .restricted: ToastManager.share.showErr(in: view, text: "Bluetooth is restricted")
-                default: ToastManager.share.showErr(in: view, text: "Unexpected bluetooth authorization")
-                }
-            }
-        case .unsupported: ToastManager.share.showErr(in: view, text: "Bluetooth is not supported on this device")
+        case .unauthorized: ToastManager.share.showErr(in: view, text: msg)
+        case .unsupported: ToastManager.share.showErr(in: view, text: msg)
         default: break
         }
     }
