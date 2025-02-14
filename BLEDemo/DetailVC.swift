@@ -217,7 +217,6 @@ class DetailVC: UIViewController {
                 RNGCommandBattery.errListHeatingModuleStatus(address),
                 RNGCommandBattery.selfDevelopedBatteryInfo(address),
                 RNGCommandBattery.softwareVersion(address),
-                RNGCommandBattery.SN(address),
             ], commandsAllSend: true) { singleSuccess, commandIdx, command, receivedList in
                 guard singleSuccess, let command = command as? RNGCommandBattery, let receivedList else { return }
                 self.model_batt = command.getData(self.model_batt, receivedList: receivedList, deviceSku: address_deviceSku.deviceSku)
@@ -243,7 +242,6 @@ class DetailVC: UIViewController {
                 Model: \(self.model_batt.Model ?? "")
                 softwareVersion: \(self.model_batt.softwareVersion ?? "")
                 ManufacturerName: \(self.model_batt.ManufacturerName ?? "")
-                SN: \(self.model_batt.SN ?? "")
                 
                 errList: \(self.model_batt.errList.map { $0.message } )
                 """

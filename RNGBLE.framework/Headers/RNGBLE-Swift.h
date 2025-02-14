@@ -366,7 +366,7 @@ SWIFT_CLASS("_TtC6RNGBLE13RNGBLEManager")
 ///
 /// \param advertisementData A dictionary containing any advertisement data.
 ///
-/// \param RSSI The current received signal strength indicator (RSSI) of the peripheral, in decibels. 值越大信号越好 -80 ～ -50 表示信号良好
+/// \param RSSI The current received signal strength indicator (RSSI) of the peripheral, in decibels. The larger the value, the better the signal -80 to -50 means good signal
 ///
 - (void)centralManager:(CBCentralManager * _Nonnull)central didDiscoverPeripheral:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData RSSI:(NSNumber * _Nonnull)RSSI;
 /// Tells the delegate that the central manager connected to a peripheral.

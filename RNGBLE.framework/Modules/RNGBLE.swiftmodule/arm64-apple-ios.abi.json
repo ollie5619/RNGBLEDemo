@@ -664,853 +664,6 @@
           },
           {
             "kind": "Var",
-            "name": "SN",
-            "printedName": "SN",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UInt8",
-                        "printedName": "Swift.UInt8",
-                        "usr": "s:s5UInt8V"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO2SNyACs5UInt8VcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO2SNyACs5UInt8VcACmF",
-            "moduleName": "RNGBLE"
-          },
-          {
-            "kind": "Var",
-            "name": "notiDevice1",
-            "printedName": "notiDevice1",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RNGCommandBattery",
-                    "printedName": "RNGBLE.RNGCommandBattery",
-                    "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO11notiDevice1yA2CmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO11notiDevice1yA2CmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "notiDevice2",
-            "printedName": "notiDevice2",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RNGCommandBattery",
-                    "printedName": "RNGBLE.RNGCommandBattery",
-                    "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO11notiDevice2yA2CmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO11notiDevice2yA2CmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "notiDevice3",
-            "printedName": "notiDevice3",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RNGCommandBattery",
-                    "printedName": "RNGBLE.RNGCommandBattery",
-                    "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO11notiDevice3yA2CmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO11notiDevice3yA2CmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "notiAddressBatteryList",
-            "printedName": "notiAddressBatteryList",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RNGCommandBattery",
-                    "printedName": "RNGBLE.RNGCommandBattery",
-                    "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO011notiAddressC4ListyA2CmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO011notiAddressC4ListyA2CmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "configAddressBatteryList",
-            "printedName": "configAddressBatteryList",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UInt8",
-                        "printedName": "Swift.UInt8",
-                        "usr": "s:s5UInt8V"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO013configAddressC4ListyACs5UInt8VcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO013configAddressC4ListyACs5UInt8VcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "shakeAddressBatteryList",
-            "printedName": "shakeAddressBatteryList",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UInt8",
-                        "printedName": "Swift.UInt8",
-                        "usr": "s:s5UInt8V"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO012shakeAddressC4ListyACs5UInt8VcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO012shakeAddressC4ListyACs5UInt8VcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "checkAddressBatteryList",
-            "printedName": "checkAddressBatteryList",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UInt8",
-                        "printedName": "Swift.UInt8",
-                        "usr": "s:s5UInt8V"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO012checkAddressC4ListyACs5UInt8VcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO012checkAddressC4ListyACs5UInt8VcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "getAddressInverter",
-            "printedName": "getAddressInverter",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RNGCommandBattery",
-                    "printedName": "RNGBLE.RNGCommandBattery",
-                    "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO18getAddressInverteryA2CmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO18getAddressInverteryA2CmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "getAddressBattery",
-            "printedName": "getAddressBattery",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RNGCommandBattery",
-                    "printedName": "RNGBLE.RNGCommandBattery",
-                    "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO010getAddressC0yA2CmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO010getAddressC0yA2CmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "getSKUInverter",
-            "printedName": "getSKUInverter",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UInt8",
-                        "printedName": "Swift.UInt8",
-                        "usr": "s:s5UInt8V"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO14getSKUInverteryACs5UInt8VcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO14getSKUInverteryACs5UInt8VcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "setAddressInverter",
-            "printedName": "setAddressInverter",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8, Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8, Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.UInt8, Swift.UInt8)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO18setAddressInverteryACs5UInt8V_AFtcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO18setAddressInverteryACs5UInt8V_AFtcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "getSKUBattery",
-            "printedName": "getSKUBattery",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UInt8",
-                        "printedName": "Swift.UInt8",
-                        "usr": "s:s5UInt8V"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO13getSKUBatteryyACs5UInt8VcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO13getSKUBatteryyACs5UInt8VcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "setAddressBattery",
-            "printedName": "setAddressBattery",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8, Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8, Swift.UInt8) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.UInt8, Swift.UInt8)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO010setAddressC0yACs5UInt8V_AFtcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO010setAddressC0yACs5UInt8V_AFtcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "setParams",
-            "printedName": "setParams",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8, [Swift.UInt8], [Swift.UInt8]) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8, [Swift.UInt8], [Swift.UInt8]) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.UInt8, [Swift.UInt8], [Swift.UInt8])",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Array",
-                            "printedName": "[Swift.UInt8]",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "UInt8",
-                                "printedName": "Swift.UInt8",
-                                "usr": "s:s5UInt8V"
-                              }
-                            ],
-                            "usr": "s:Sa"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Array",
-                            "printedName": "[Swift.UInt8]",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "UInt8",
-                                "printedName": "Swift.UInt8",
-                                "usr": "s:s5UInt8V"
-                              }
-                            ],
-                            "usr": "s:Sa"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO9setParamsyACs5UInt8V_SayAFGAGtcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO9setParamsyACs5UInt8V_SayAFGAGtcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "set",
-            "printedName": "set",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RNGBLE.RNGCommandBattery.Type) -> (Swift.UInt8, Swift.UInt16, Swift.UInt16) -> RNGBLE.RNGCommandBattery",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.UInt8, Swift.UInt16, Swift.UInt16) -> RNGBLE.RNGCommandBattery",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.UInt8, pdu: Swift.UInt16, val: Swift.UInt16)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt16",
-                            "printedName": "Swift.UInt16",
-                            "usr": "s:s6UInt16V"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt16",
-                            "printedName": "Swift.UInt16",
-                            "usr": "s:s6UInt16V"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "RNGBLE.RNGCommandBattery.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RNGCommandBattery",
-                        "printedName": "RNGBLE.RNGCommandBattery",
-                        "usr": "s:6RNGBLE17RNGCommandBatteryO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:6RNGBLE17RNGCommandBatteryO3setyACs5UInt8V_s6UInt16VAHtcACmF",
-            "mangledName": "$s6RNGBLE17RNGCommandBatteryO3setyACs5UInt8V_s6UInt16VAHtcACmF",
-            "moduleName": "RNGBLE",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "SKU_MaxBatt",
             "printedName": "SKU_MaxBatt",
             "children": [
@@ -11520,8 +10673,7 @@
             "moduleName": "RNGBLE",
             "static": true,
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -11587,8 +10739,7 @@
             "moduleName": "RNGBLE",
             "static": true,
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -11660,8 +10811,7 @@
             "moduleName": "RNGBLE",
             "static": true,
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -11727,8 +10877,7 @@
             "moduleName": "RNGBLE",
             "static": true,
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -11800,8 +10949,7 @@
             "moduleName": "RNGBLE",
             "static": true,
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -12028,8 +11176,7 @@
             "moduleName": "RNGBLE",
             "static": true,
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -12101,8 +11248,7 @@
             "moduleName": "RNGBLE",
             "static": true,
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -23166,9 +22312,6 @@
         "usr": "s:6RNGBLE10BLEDCCTypeO",
         "mangledName": "$s6RNGBLE10BLEDCCTypeO",
         "moduleName": "RNGBLE",
-        "declAttributes": [
-          "RawDocComment"
-        ],
         "isEnumExhaustive": true,
         "conformances": [
           {
@@ -23520,9 +22663,6 @@
         "usr": "s:6RNGBLE15BLEInverterTypeO",
         "mangledName": "$s6RNGBLE15BLEInverterTypeO",
         "moduleName": "RNGBLE",
-        "declAttributes": [
-          "RawDocComment"
-        ],
         "isEnumExhaustive": true,
         "conformances": [
           {
@@ -24463,8 +23603,7 @@
             "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
+              "HasStorage"
             ],
             "hasStorage": true,
             "accessors": [
@@ -24578,7 +23717,6 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl",
               "RawDocComment"
             ],
             "hasStorage": true,
@@ -24693,7 +23831,6 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl",
               "RawDocComment"
             ],
             "hasStorage": true,
@@ -26496,121 +25633,6 @@
                 "declKind": "Accessor",
                 "usr": "s:6RNGBLE15BLEBatteryModelC16ManufacturerNameSSSgvM",
                 "mangledName": "$s6RNGBLE15BLEBatteryModelC16ManufacturerNameSSSgvM",
-                "moduleName": "RNGBLE",
-                "implicit": true,
-                "isOpen": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "SN",
-            "printedName": "SN",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:6RNGBLE15BLEBatteryModelC2SNSSSgvp",
-            "mangledName": "$s6RNGBLE15BLEBatteryModelC2SNSSSgvp",
-            "moduleName": "RNGBLE",
-            "isOpen": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6RNGBLE15BLEBatteryModelC2SNSSSgvg",
-                "mangledName": "$s6RNGBLE15BLEBatteryModelC2SNSSSgvg",
-                "moduleName": "RNGBLE",
-                "implicit": true,
-                "isOpen": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6RNGBLE15BLEBatteryModelC2SNSSSgvs",
-                "mangledName": "$s6RNGBLE15BLEBatteryModelC2SNSSSgvs",
-                "moduleName": "RNGBLE",
-                "implicit": true,
-                "isOpen": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6RNGBLE15BLEBatteryModelC2SNSSSgvM",
-                "mangledName": "$s6RNGBLE15BLEBatteryModelC2SNSSSgvM",
                 "moduleName": "RNGBLE",
                 "implicit": true,
                 "isOpen": true,
@@ -30042,21 +29064,21 @@
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/extension\/RNGLink.swift",
       "kind": "IntegerLiteral",
-      "offset": 450,
+      "offset": 453,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/extension\/RNGLink.swift",
       "kind": "IntegerLiteral",
-      "offset": 518,
+      "offset": 529,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/extension\/RNGLink.swift",
       "kind": "BooleanLiteral",
-      "offset": 540,
+      "offset": 551,
       "length": 4,
       "value": "true"
     },
@@ -30077,91 +29099,91 @@
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "StringLiteral",
-      "offset": 400,
+      "offset": 396,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "StringLiteral",
-      "offset": 426,
+      "offset": 422,
       "length": 4,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2453,
+      "offset": 2664,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2533,
+      "offset": 2744,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "StringLiteral",
-      "offset": 2622,
+      "offset": 2833,
       "length": 19,
       "value": "\"queue.sendCommand\""
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "StringLiteral",
-      "offset": 2683,
+      "offset": 2894,
       "length": 22,
       "value": "\"queue.sendOTACommand\""
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "Dictionary",
-      "offset": 2847,
+      "offset": 3058,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "Dictionary",
-      "offset": 3088,
+      "offset": 3287,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "Dictionary",
-      "offset": 3468,
+      "offset": 3691,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 23178,
+      "offset": 23785,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 23217,
+      "offset": 23824,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 24244,
+      "offset": 24851,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/RNGBLEManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 24285,
+      "offset": 24892,
       "length": 1,
       "value": "0"
     },
@@ -30511,7 +29533,7 @@
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/commands\/RNGCommandController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2819,
+      "offset": 2848,
       "length": 4,
       "value": "0xFF"
     },
@@ -30560,259 +29582,259 @@
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 814,
+      "offset": 821,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 868,
+      "offset": 876,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 930,
+      "offset": 933,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1008,
+      "offset": 1006,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1079,
+      "offset": 1069,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1147,
+      "offset": 1132,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1209,
+      "offset": 1204,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1259,
+      "offset": 1261,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1302,
+      "offset": 1318,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1341,
+      "offset": 1361,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1381,
+      "offset": 1405,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1437,
+      "offset": 1463,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1486,
+      "offset": 1511,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1538,
+      "offset": 1574,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4746,
+      "offset": 4782,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4758,
+      "offset": 4794,
       "length": 14,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4783,
+      "offset": 4819,
       "length": 14,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4808,
+      "offset": 4844,
       "length": 14,
       "value": "3"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4833,
+      "offset": 4869,
       "length": 14,
       "value": "4"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4858,
+      "offset": 4894,
       "length": 14,
       "value": "5"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4883,
+      "offset": 4919,
       "length": 14,
       "value": "6"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4908,
+      "offset": 4944,
       "length": 14,
       "value": "7"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4933,
+      "offset": 4969,
       "length": 14,
       "value": "8"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4958,
+      "offset": 4994,
       "length": 14,
       "value": "9"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4983,
+      "offset": 5019,
       "length": 15,
       "value": "10"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5009,
+      "offset": 5045,
       "length": 15,
       "value": "11"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5035,
+      "offset": 5071,
       "length": 15,
       "value": "12"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5061,
+      "offset": 5097,
       "length": 15,
       "value": "13"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5087,
+      "offset": 5123,
       "length": 15,
       "value": "14"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5113,
+      "offset": 5149,
       "length": 10,
       "value": "15"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5134,
+      "offset": 5170,
       "length": 9,
       "value": "16"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5154,
+      "offset": 5190,
       "length": 12,
       "value": "17"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5622,
+      "offset": 5658,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5640,
+      "offset": 5676,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5658,
+      "offset": 5694,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5676,
+      "offset": 5712,
       "length": 2,
       "value": "48"
     },
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/models\/BLEControllerModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5695,
+      "offset": 5731,
       "length": 4,
       "value": "0xFF"
     },
@@ -30840,7 +29862,7 @@
     {
       "filePath": "\/Users\/ollieli\/_projects\/RNGBLESDK\/RNGBLE\/extension\/RNGBLETools.swift",
       "kind": "IntegerLiteral",
-      "offset": 1822,
+      "offset": 1856,
       "length": 2,
       "value": "16"
     },

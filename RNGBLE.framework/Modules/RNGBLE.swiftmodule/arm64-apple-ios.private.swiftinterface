@@ -27,22 +27,6 @@ public enum RNGCommandBattery : RNGBLE.RNGCommandProtocol {
   case errListHeatingModuleStatus(_: Swift.UInt8)
   case selfDevelopedBatteryInfo(_: Swift.UInt8)
   case softwareVersion(_: Swift.UInt8)
-  case SN(_: Swift.UInt8)
-  case notiDevice1
-  case notiDevice2
-  case notiDevice3
-  case notiAddressBatteryList
-  case configAddressBatteryList(_: Swift.UInt8)
-  case shakeAddressBatteryList(_: Swift.UInt8)
-  case checkAddressBatteryList(_: Swift.UInt8)
-  case getAddressInverter
-  case getAddressBattery
-  case getSKUInverter(_: Swift.UInt8)
-  case setAddressInverter(_: Swift.UInt8, _: Swift.UInt8)
-  case getSKUBattery(_: Swift.UInt8)
-  case setAddressBattery(_: Swift.UInt8, _: Swift.UInt8)
-  case setParams(_: Swift.UInt8, _: [Swift.UInt8], _: [Swift.UInt8])
-  case set(_: Swift.UInt8, pdu: Swift.UInt16, val: Swift.UInt16)
   case SKU_MaxBatt
   public var funcCode: Swift.UInt8 {
     get
@@ -519,9 +503,6 @@ public struct RNGBLETools {
 }
 @objc @_inheritsConvenienceInitializers public class BLEBatteryModel : ObjectiveC.NSObject {
   public var Address: Swift.Int?
-  public var s1475: Swift.String?
-  public var Charging: Swift.Bool?
-  public var Discharging: Swift.Bool?
   public var cellVolts: [Swift.Double]
   public var maxCellTemperature: Swift.Double?
   public var minCellTemperature: Swift.Double?
@@ -537,7 +518,6 @@ public struct RNGBLETools {
   public var Model: Swift.String?
   public var softwareVersion: Swift.String?
   public var ManufacturerName: Swift.String?
-  public var SN: Swift.String?
   public var errList: [RNGBLE.RNGBLEErrorModel]
   @objc override dynamic public init()
   @objc deinit
